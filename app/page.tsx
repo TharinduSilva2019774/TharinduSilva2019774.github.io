@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
@@ -79,19 +79,19 @@ const projectPlaceholders = [
 
 const recommendations = [
   {
-    name: "Dilara Perera",
+    name: "Sapumal Wijekoon",
     quote:
-      "Tharindu consistently bridges product ideas with reliable engineering. He is thorough, collaborative, and keeps teams focused on outcomes.",
+      "Tharindu's deep expertise in backend development, AWS, and system architecture made him an exceptional mentor and teammate. His problem-solving skills and ability to guide others set him apart as a truly talented and driven professional.",
   },
   {
-    name: "Kasun de Alwis",
+    name: "Shabina Farveen",
     quote:
-      "A rare mix of backend rigour and frontend polish. His AWS knowledge helped us scale securely without slowing the roadmap.",
+      "Tharindu quickly became an inspiration to me during our internship. His professionalism in conducting knowledge transfer sessions, combined with his dedication to excellence and approachable nature, left a lasting impact. He consistently delivered high-quality work on time, making him an invaluable asset to any team.",
   },
   {
-    name: "Minoli Jayasinghe",
+    name: "Kalsara Magamage",
     quote:
-      "From mentorship to delivery, Tharindu brings energy and ownership. He's the person you trust with critical releases.",
+      "Working with Tharindu at Rootcode Labs was a pleasure. His mastery of AWS, Spring Boot, and backend architecture consistently impressed the team. He's not only technically brilliant but also highly collaborative and dependable a rare combination that makes him stand out.",
   },
 ];
 
@@ -100,19 +100,19 @@ const contactLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/tharindu-sembakutti-64a8781b8/",
     description: "Connect on LinkedIn",
-    symbol: "💼",
+    symbol: "??",
   },
   {
     label: "GitHub",
     href: "https://github.com/TharinduSilva2019774",
     description: "Explore GitHub projects",
-    symbol: "💻",
+    symbol: "??",
   },
   {
     label: "Email",
     href: "mailto:tsembakutti@gmail.com",
     description: "Send an email",
-    symbol: "✉️",
+    symbol: "??",
   },
 ];
 
@@ -326,7 +326,7 @@ export default function HomePage() {
           }`}
           aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
         >
-          <span>{isDark ? "🌙" : "☀️"}</span>
+          <span>{isDark ? "??" : "??"}</span>
           <span>{isDark ? "Dark" : "Light"} mode</span>
         </button>
         <Reveal className="flex w-full max-w-3xl flex-col items-center gap-8 text-center">
@@ -356,9 +356,10 @@ export default function HomePage() {
             </h1>
           </div>
           <p className={heroBodyText}>
-            Building secure, scalable software with modern cloud-native tooling.
-            This space will soon showcase selected projects, experience
-            highlights, and ways to collaborate.
+            Passionate Software Engineer skilled in building scalable, secure
+            applications using Java, Python, and AWS. Focused on crafting clean,
+            efficient code and delivering modern full-stack solutions that make
+            an impact.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/resume" className={primaryButtonClass}>
@@ -378,9 +379,18 @@ export default function HomePage() {
             Passionate About Building User-Centred Solutions
           </h2>
           <p className={sectionBodyText}>
-            A brief introduction about your background, values, and what you are
-            looking for will live here. Use this area to set context before
-            readers explore your work in detail.
+            I’m Tharindu Sembakutti, a Software Engineering graduate from the
+            University of Westminster with first-class honours. I have hands-on
+            experience in AWS technologies, Java Spring Boot, React, and Python
+            frameworks such as Django and Flask. My work includes developing
+            end-to-end systems, integrating cloud services, and implementing
+            machine learning models. I’ve contributed to multiple projects from
+            chat applications and workflow automation tools to health and
+            fitness apps where I focused on creating reliable backends,
+            intuitive user interfaces, and seamless deployments using AWS and
+            Google Cloud. Driven by curiosity and problem-solving, I thrive in
+            collaborative environments and enjoy transforming complex challenges
+            into elegant software solutions.
           </p>
         </Reveal>
       </section>
@@ -389,11 +399,7 @@ export default function HomePage() {
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
           <Reveal className="flex flex-col gap-4 text-center md:text-left">
             <p className={sectionBadgeClass}>Projects</p>
-            <h2 className={sectionHeadingClass}>Featured Work (Coming Soon)</h2>
-            <p className={projectsIntroText}>
-              Add project spotlights here with visuals, tech stacks, and impact
-              summaries as they are ready to showcase.
-            </p>
+            <h2 className={sectionHeadingClass}>Featured Work</h2>
           </Reveal>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {projectPlaceholders.map((project, index) => (
@@ -485,7 +491,7 @@ export default function HomePage() {
           aria-expanded={contactOpen}
           aria-controls="contact-links-panel"
         >
-          <span>📬</span>
+          <span>??</span>
           <span>Contact</span>
         </button>
         {contactOpen ? (
