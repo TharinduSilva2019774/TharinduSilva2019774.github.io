@@ -100,19 +100,19 @@ const contactLinks = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/tharindu-sembakutti-64a8781b8/",
     description: "Connect on LinkedIn",
-    symbol: "??",
+    symbol: "💼",
   },
   {
     label: "GitHub",
     href: "https://github.com/TharinduSilva2019774",
     description: "Explore GitHub projects",
-    symbol: "??",
+    symbol: "💻",
   },
   {
     label: "Email",
     href: "mailto:tsembakutti@gmail.com",
     description: "Send an email",
-    symbol: "??",
+    symbol: "✉️",
   },
 ];
 
@@ -326,7 +326,7 @@ export default function HomePage() {
           }`}
           aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
         >
-          <span>{isDark ? "??" : "??"}</span>
+          <span>{isDark ? "🌙" : "☀️"}</span>
           <span>{isDark ? "Dark" : "Light"} mode</span>
         </button>
         <Reveal className="flex w-full max-w-3xl flex-col items-center gap-8 text-center">
@@ -379,12 +379,12 @@ export default function HomePage() {
             Passionate About Building User-Centred Solutions
           </h2>
           <p className={sectionBodyText}>
-            I’m Tharindu Sembakutti, a Software Engineering graduate from the
+            I'm Tharindu Sembakutti, a Software Engineering graduate from the
             University of Westminster with first-class honours. I have hands-on
             experience in AWS technologies, Java Spring Boot, React, and Python
             frameworks such as Django and Flask. My work includes developing
             end-to-end systems, integrating cloud services, and implementing
-            machine learning models. I’ve contributed to multiple projects from
+            machine learning models. I've contributed to multiple projects from
             chat applications and workflow automation tools to health and
             fitness apps where I focused on creating reliable backends,
             intuitive user interfaces, and seamless deployments using AWS and
@@ -447,10 +447,6 @@ export default function HomePage() {
           <div className="space-y-2">
             <p className={sectionBadgeClass}>Recommendations</p>
             <h2 className={sectionHeadingClass}>What Colleagues Say</h2>
-            <p className={projectsIntroText}>
-              Single spotlight rotates every couple of seconds so you can
-              highlight personable endorsements.
-            </p>
           </div>
           <div className="relative w-full">
             <aside className={recommendationCardClass}>
@@ -491,7 +487,7 @@ export default function HomePage() {
           aria-expanded={contactOpen}
           aria-controls="contact-links-panel"
         >
-          <span>??</span>
+          <span>📬</span>
           <span>Contact</span>
         </button>
         {contactOpen ? (
