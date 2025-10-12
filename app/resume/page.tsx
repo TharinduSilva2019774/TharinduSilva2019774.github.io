@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 type Experience = {
   company: string;
@@ -31,6 +31,13 @@ type Project = {
   tech: string[];
 };
 
+type Course = {
+  title: string;
+  provider: string;
+  link: string;
+  description: string;
+};
+
 const summary = [
   "First-class Software Engineering graduate with hands-on experience delivering production-ready features across web, mobile, and cloud platforms.",
   "Comfortable spanning frontend and backend work, with a focus on secure AWS-backed architectures and polished user experiences.",
@@ -52,7 +59,12 @@ const experiences: Experience[] = [
       "Document incidents, fixes, and customer feedback to drive continuous improvement.",
       "Collaborate with partner companies when integrated solutions are required.",
     ],
-    stack: ["Systems diagnostics", "Windows", "Customer enablement", "Knowledge base upkeep"],
+    stack: [
+      "Systems diagnostics",
+      "Windows",
+      "Customer enablement",
+      "Knowledge base upkeep",
+    ],
   },
   {
     company: "Rootcode Labs",
@@ -69,14 +81,22 @@ const experiences: Experience[] = [
       "Implemented Route 53 routing to support tenant-specific subdomains.",
       "Built React components that consumed REST APIs for data retrieval and management.",
     ],
-    stack: ["Spring Boot", "AWS Cognito", "AWS Lambda", "ReactJS", "MySQL", "Git"],
+    stack: [
+      "Spring Boot",
+      "AWS Cognito",
+      "AWS Lambda",
+      "ReactJS",
+      "MySQL",
+      "Git",
+    ],
   },
   {
     company: "CommercePromote Inc",
     role: "Summer Intern (Software Engineering)",
     period: "Jun 2021 - Jul 2023",
-    location: "Remote",
-    summary: "Worked on ServiceTag, an auto repair shop management platform supporting daily operations.",
+    location: "Colombo, Sri Lanka (Onsite)",
+    summary:
+      "Worked on ServiceTag, an auto repair shop management platform supporting daily operations.",
     highlights: [
       "Designed and built RESTful APIs with .NET to power core workflows.",
       "Implemented responsive UI screens using React and TypeScript.",
@@ -103,7 +123,13 @@ const education: EducationItem[] = [
 const skillGroups: SkillGroup[] = [
   {
     title: "Frontend and Mobile",
-    items: ["ReactJS", "React Native", "TypeScript", "JavaScript", "Tailwind CSS"],
+    items: [
+      "ReactJS",
+      "React Native",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
   },
   {
     title: "Backend and APIs",
@@ -111,15 +137,38 @@ const skillGroups: SkillGroup[] = [
   },
   {
     title: "Cloud and DevOps",
-    items: ["AWS Lambda", "AWS Cognito", "Route 53", "RDS", "EC2", "CodePipeline"],
+    items: [
+      "AWS Lambda",
+      "AWS Cognito",
+      "Route 53",
+      "RDS",
+      "EC2",
+      "CodePipeline",
+    ],
   },
   {
     title: "Data and Analytics",
-    items: ["MySQL", "SQL", "H2 Database", "Regression modelling", "Deep learning with VGG16"],
+    items: [
+      "MySQL",
+      "SQL",
+      "H2 Database",
+      "Regression modelling",
+      "Deep learning with VGG16",
+    ],
   },
   {
     title: "Practices and Tooling",
     items: ["Git", "GitHub pipelines", "Unit testing", "Integration testing"],
+  },
+];
+
+const courses: Course[] = [
+  {
+    title: "AI Python for Beginners",
+    provider: "deeplearning.ai",
+    link: "https://learn.deeplearning.ai/accomplishments/d8e5d841-2db1-4692-82f8-4cd20977af9e?usp=sharing",
+    description:
+      "Learn Python programming with AI support to enhance your coding workflow. Build strong skills in writing, testing, and debugging code efficiently, and apply your knowledge to develop real-world AI-powered applications.",
   },
 ];
 
@@ -163,9 +212,15 @@ export default function ResumePage() {
       <header className="bg-slate-900 text-slate-100">
         <div className="mx-auto grid max-w-5xl gap-10 px-6 py-16 lg:grid-cols-[2fr_1fr] lg:items-start">
           <div className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-slate-400">Curriculum Vitae</p>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Tharindu Silva</h1>
-            <h2 className="text-lg font-medium text-slate-300">Software Engineer - Full Stack and Cloud</h2>
+            <p className="text-xs uppercase tracking-[0.4em] text-slate-400">
+              Curriculum Vitae
+            </p>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Tharindu Silva
+            </h1>
+            <h2 className="text-lg font-medium text-slate-300">
+              Software Engineer - Full Stack and Cloud
+            </h2>
             <div className="space-y-4 text-sm leading-relaxed text-slate-300 sm:text-base">
               {summary.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -180,24 +235,41 @@ export default function ResumePage() {
           </div>
           <div className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-slate-800/40 p-6 text-sm text-slate-200">
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">Location</span>
+              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                Location
+              </span>
               <p className="mt-1 font-medium">London, United Kingdom</p>
             </div>
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">Phone</span>
-              <a className="mt-1 block font-medium hover:text-white" href="tel:+447438417881">
+              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                Phone
+              </span>
+              <a
+                className="mt-1 block font-medium hover:text-white"
+                href="tel:+447438417881"
+              >
                 +44 (74) 3841 7881
               </a>
             </div>
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">Email</span>
-              <a className="mt-1 block font-medium hover:text-white" href="mailto:tsembakutti@gmail.com">
+              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                Email
+              </span>
+              <a
+                className="mt-1 block font-medium hover:text-white"
+                href="mailto:tsembakutti@gmail.com"
+              >
                 tsembakutti@gmail.com
               </a>
             </div>
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">Portfolio</span>
-              <Link className="mt-1 block font-medium hover:text-white" href="/">
+              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                Portfolio
+              </span>
+              <Link
+                className="mt-1 block font-medium hover:text-white"
+                href="/"
+              >
                 tharindusilva.github.io
               </Link>
             </div>
@@ -219,16 +291,24 @@ export default function ResumePage() {
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-900">{experience.role}</h3>
-                    <p className="text-sm font-medium text-slate-600">{experience.company}</p>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {experience.role}
+                    </h3>
+                    <p className="text-sm font-medium text-slate-600">
+                      {experience.company}
+                    </p>
                   </div>
                   <div className="text-right text-sm text-slate-500">
-                    <p className="font-medium text-slate-600">{experience.period}</p>
+                    <p className="font-medium text-slate-600">
+                      {experience.period}
+                    </p>
                     {experience.location ? <p>{experience.location}</p> : null}
                   </div>
                 </div>
                 {experience.summary ? (
-                  <p className="mt-4 text-sm text-slate-600">{experience.summary}</p>
+                  <p className="mt-4 text-sm text-slate-600">
+                    {experience.summary}
+                  </p>
                 ) : null}
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">
                   {experience.highlights.map((item) => (
@@ -249,7 +329,10 @@ export default function ResumePage() {
         </section>
 
         <section className="space-y-8">
-          <SectionHeading title="Education" description="Academic foundation and key areas of study." />
+          <SectionHeading
+            title="Education"
+            description="Academic foundation and key areas of study."
+          />
           <div className="space-y-6">
             {education.map((item) => (
               <article
@@ -258,8 +341,12 @@ export default function ResumePage() {
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-slate-900">{item.degree}</h3>
-                    <p className="text-sm font-medium text-slate-600">{item.institution}</p>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {item.degree}
+                    </h3>
+                    <p className="text-sm font-medium text-slate-600">
+                      {item.institution}
+                    </p>
                   </div>
                   <div className="text-right text-sm text-slate-500">
                     <p className="font-medium text-slate-600">{item.period}</p>
@@ -267,7 +354,9 @@ export default function ResumePage() {
                   </div>
                 </div>
                 {item.grade ? (
-                  <p className="mt-3 text-sm font-medium text-slate-600">{item.grade}</p>
+                  <p className="mt-3 text-sm font-medium text-slate-600">
+                    {item.grade}
+                  </p>
                 ) : null}
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">
                   {item.details.map((detail) => (
@@ -283,17 +372,25 @@ export default function ResumePage() {
         </section>
 
         <section className="space-y-6">
-          <SectionHeading title="Skills" description="Technologies and practices applied across projects." />
+          <SectionHeading
+            title="Skills"
+            description="Technologies and practices applied across projects."
+          />
           <div className="grid gap-4 md:grid-cols-2">
             {skillGroups.map((group) => (
               <div
                 key={group.title}
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60"
               >
-                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">{group.title}</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  {group.title}
+                </h3>
                 <div className="mt-4 flex flex-wrap gap-2 text-sm text-slate-700">
                   {group.items.map((skill) => (
-                    <span key={skill} className="rounded-full bg-slate-200 px-3 py-1 font-medium">
+                    <span
+                      key={skill}
+                      className="rounded-full bg-slate-200 px-3 py-1 font-medium"
+                    >
                       {skill}
                     </span>
                   ))}
@@ -303,8 +400,41 @@ export default function ResumePage() {
           </div>
         </section>
 
+        <section className="space-y-6">
+          <SectionHeading
+            title="Courses"
+            description="Recent professional development and certifications."
+          />
+          <div className="grid gap-4 md:grid-cols-2">
+            {courses.map((course) => (
+              <article
+                key={course.title}
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-200/60"
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  {course.provider}
+                </h3>
+                <Link
+                  href={course.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex w-fit items-center text-base font-semibold text-slate-900 hover:text-slate-600"
+                >
+                  {course.title}
+                </Link>
+                <p className="mt-3 text-sm text-slate-600">
+                  {course.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="space-y-8">
-          <SectionHeading title="Selected Projects" description="Case studies that highlight delivery, impact, and tooling." />
+          <SectionHeading
+            title="Selected Projects"
+            description="Case studies that highlight delivery, impact, and tooling."
+          />
           <div className="space-y-6">
             {projects.map((project) => (
               <article
@@ -312,7 +442,9 @@ export default function ResumePage() {
                 className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm shadow-slate-200/60"
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
-                  <h3 className="text-xl font-semibold text-slate-900">{project.name}</h3>
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    {project.name}
+                  </h3>
                   <span className="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
                     {project.context}
                   </span>
@@ -327,7 +459,10 @@ export default function ResumePage() {
                 </ul>
                 <div className="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-slate-500">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 font-semibold">
+                    <span
+                      key={tech}
+                      className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 font-semibold"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -340,7 +475,10 @@ export default function ResumePage() {
 
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-8 text-sm text-slate-600">
-          <p>Open to software engineering roles focused on full-stack development and cloud platforms.</p>
+          <p>
+            Open to software engineering roles focused on full-stack
+            development, cloud platforms, machine learning, and AI.
+          </p>
           <a
             className="rounded-full border border-slate-200 px-4 py-2 font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-900"
             href="mailto:tsembakutti@gmail.com"
@@ -362,7 +500,9 @@ function SectionHeading({ title, description }: SectionHeadingProps) {
   return (
     <div className="space-y-2">
       <h2 className="text-2xl font-semibold text-slate-900">{title}</h2>
-      {description ? <p className="text-sm text-slate-600">{description}</p> : null}
+      {description ? (
+        <p className="text-sm text-slate-600">{description}</p>
+      ) : null}
     </div>
   );
 }
