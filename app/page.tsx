@@ -108,12 +108,6 @@ const contactLinks = [
     description: "Explore GitHub projects",
     symbol: "💻",
   },
-  {
-    label: "Email",
-    href: "mailto:tsembakutti@gmail.com",
-    description: "Send an email",
-    symbol: "✉️",
-  },
 ];
 
 export default function HomePage() {
