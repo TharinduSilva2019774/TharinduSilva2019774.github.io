@@ -242,28 +242,6 @@ export default function ResumePage() {
             </div>
             <div>
               <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                Phone
-              </span>
-              <a
-                className="mt-1 block font-medium hover:text-white"
-                href="tel:+447438417881"
-              >
-                +44 (74) 3841 7881
-              </a>
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                Email
-              </span>
-              <a
-                className="mt-1 block font-medium hover:text-white"
-                href="mailto:tsembakutti@gmail.com"
-              >
-                tsembakutti@gmail.com
-              </a>
-            </div>
-            <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
                 Portfolio
               </span>
               <Link
