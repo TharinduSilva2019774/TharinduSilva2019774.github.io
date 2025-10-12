@@ -375,22 +375,17 @@ export default function HomePage() {
       <section id="about" className="px-6 py-24">
         <Reveal className={aboutCardClass}>
           <p className={sectionBadgeClass}>About Me</p>
-          <h2 className={sectionHeadingClass}>
-            Passionate About Building User-Centred Solutions
-          </h2>
           <p className={sectionBodyText}>
-            I'm Tharindu Sembakutti, a Software Engineering graduate from the
-            University of Westminster with first-class honours. I have hands-on
-            experience in AWS technologies, Java Spring Boot, React, and Python
-            frameworks such as Django and Flask. My work includes developing
-            end-to-end systems, integrating cloud services, and implementing
-            machine learning models. I've contributed to multiple projects from
-            chat applications and workflow automation tools to health and
-            fitness apps where I focused on creating reliable backends,
-            intuitive user interfaces, and seamless deployments using AWS and
-            Google Cloud. Driven by curiosity and problem-solving, I thrive in
-            collaborative environments and enjoy transforming complex challenges
-            into elegant software solutions.
+            I'm Tharindu Sembakutti, a passionate Software Engineer and Computer
+            Science graduate with hands-on experience in full-stack development
+            and cloud technologies. I specialize in building scalable, secure,
+            and userfriendly applications using Java (Spring Boot), Python
+            (Flask/Django), and JavaScript (React/Next.js). My journey spans
+            developing business workflow platforms, chat applications, and
+            AI-driven tools often leveraging AWS for cloud solutions and machine
+            learning for intelligent features. I enjoy solving complex problems,
+            writing clean code, and continuously learning new technologies to
+            deliver impactful software.
           </p>
         </Reveal>
       </section>
