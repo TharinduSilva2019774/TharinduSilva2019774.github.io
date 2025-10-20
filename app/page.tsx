@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 
 type RevealProps = {
   children: ReactNode;
@@ -110,21 +111,63 @@ const contactLinks = [
   },
 ];
 
+const skillGroups = [
+  {
+    title: "Frontend and Mobile",
+    items: [
+      "ReactJS",
+      "React Native",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "Backend and APIs",
+    items: ["Spring Boot", ".NET", "Flask", "Django", "REST API design"],
+  },
+  {
+    title: "Cloud and DevOps",
+    items: [
+      "AWS Lambda",
+      "AWS Cognito",
+      "Route 53",
+      "RDS",
+      "EC2",
+      "CodePipeline",
+    ],
+  },
+  {
+    title: "Data and Analytics",
+    items: [
+      "MySQL",
+      "SQL",
+      "H2 Database",
+      "Regression modelling",
+      "Deep learning with VGG16",
+    ],
+  },
+  {
+    title: "Practices and Tooling",
+    items: ["Git", "GitHub pipelines", "Unit testing", "Integration testing"],
+  },
+];
+
 export default function HomePage() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window !== "undefined") {
+      const stored = window.localStorage.getItem("ts-portfolio-theme");
+      if (stored === "light" || stored === "dark") return stored as "light" | "dark";
+    }
+    return "dark";
+  });
   const [activeRecommendation, setActiveRecommendation] = useState(0);
   const [contactOpen, setContactOpen] = useState(false);
 
   const contactPanelRef = useRef<HTMLDivElement | null>(null);
   const contactButtonRef = useRef<HTMLButtonElement | null>(null);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("ts-portfolio-theme");
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-    }
-  }, []);
+  // initial theme is handled by the state initializer above to avoid a flash
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -258,6 +301,14 @@ export default function HomePage() {
   const recommendationQuoteClass = `text-base italic ${
     isDark ? "text-slate-300" : "text-slate-600"
   }`;
+  const skillCardClass = `rounded-3xl p-6 shadow-sm transition ${
+    isDark
+      ? "border border-slate-800 bg-slate-900/70 text-slate-200 shadow-black/30"
+      : "border border-slate-200 bg-white text-slate-700 shadow-slate-200/60"
+  }`;
+  const skillItemClass = `rounded-full px-3 py-1 font-medium ${
+    isDark ? "bg-slate-800 text-slate-200" : "bg-slate-100 text-slate-600"
+  }`;
   const contactButtonClass = `inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
     isDark
       ? "border-slate-700 bg-slate-900/80 text-slate-200 hover:border-slate-500 hover:text-white"
@@ -272,40 +323,114 @@ export default function HomePage() {
     isDark ? "hover:bg-slate-800/70" : "hover:bg-slate-100"
   }`;
 
-  const renderTechIcon = () => (
-    <svg
-      className={`h-5 w-5 ${isDark ? "text-slate-200" : "text-slate-600"}`}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4.75 5.75C4.75 4.784 5.534 4 6.5 4h11c.966 0 1.75.784 1.75 1.75v11.5c0 .966-.784 1.75-1.75 1.75h-11A1.75 1.75 0 0 1 4.75 17.25V5.75Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M4.75 8.5h14.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M8 3.5v2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M16 3.5v2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
+  const techIcon = (label: string) => {
+    const commonClass = `h-5 w-5 ${
+      isDark ? "text-slate-200" : "text-slate-600"
+    }`;
+    const l = label.toLowerCase();
+    if (l.includes("react")) {
+      return (
+        <div>
+          <Image src="/React.png" width={25} height={25} alt="React" />
+        </div>
+      );
+    }
+    if (l.includes("spring")) {
+      return (
+        <div>
+          <Image src="/Spring.png" width={25} height={25} alt="Spring" />
+        </div>
+      );
+    }
+    if (l.includes("java")) {
+      return (
+        <div>
+          <Image src="/Java.png" width={25} height={25} alt="Java" />
+        </div>
+      );
+    }
+    if (l.includes("python")) {
+      return (
+        <div>
+          <Image src="/Python.png" width={25} height={25} alt="Python" />
+        </div>
+      );
+    }
+    if (l.includes("aws")) {
+      if (isDark) {
+        return <Image src="/AWS-black.png" width={25} height={25} alt="AWS" />;
+      } else {
+        return <Image src="/AWS-white.png" width={25} height={25} alt="AWS" />;
+      }
+    }
+    if (l.includes("mysql") || l === "sql") {
+      return (
+        <div>
+          <Image src="/mysql.png" width={35} height={35} alt="MySQL" />
+        </div>
+      );
+    }
+    if (l.includes("react native")) {
+      return (
+        <div>
+          <Image src="/React.png" width={25} height={25} alt="React" />
+        </div>
+      );
+    }
+    if (l.includes("typescript")) {
+      return (
+        <div>
+          <Image
+            src="/TypeScript.png"
+            width={25}
+            height={25}
+            alt="TypeScript"
+          />
+        </div>
+      );
+    }
+    if (l === "sql") {
+      return (
+        <div>
+          <Image src="/SQL.png" width={25} height={25} alt="SQL" />
+        </div>
+      );
+    }
+    if (l.includes(".net")) {
+      return (
+        <div>
+          <Image src="/dotnet.png" width={45} height={45} alt=".NET" />
+        </div>
+      );
+    }
+    if (l.includes("flask")) {
+      return (
+        <div>
+          <Image src="/flask.png" width={25} height={25} alt="Flask" />
+        </div>
+      );
+    }
+    // Fallback generic square icon
+    return (
+      <svg
+        className={commonClass}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden
+      >
+        <rect
+          x="4"
+          y="4"
+          width="16"
+          height="16"
+          rx="3"
+          stroke="currentColor"
+          strokeWidth="1.2"
+        />
+      </svg>
+    );
+  };
 
   return (
     <main className={mainClass}>
@@ -410,7 +535,7 @@ export default function HomePage() {
                         className={techIconShellClass}
                         title={techLabel}
                       >
-                        {renderTechIcon()}
+                        {techIcon(techLabel)}
                       </span>
                     ))}
                   </div>
@@ -426,6 +551,32 @@ export default function HomePage() {
                   </div>
                 </div>
               </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="px-6 pb-24">
+        <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
+          <Reveal className="flex flex-col gap-4 text-center md:text-left">
+            <p className={sectionBadgeClass}>Skills</p>
+            <h2 className={sectionHeadingClass}>Technologies & Practices</h2>
+            <p className={projectsIntroText}>
+              Technologies and working practices I’ve applied across projects
+              and internships.
+            </p>
+          </Reveal>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {skillGroups.map((group) => (
+              <div key={group.title} className={skillCardClass}>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">{group.title}</h3>
+                <div className="mt-4 flex flex-wrap gap-2 text-sm">
+                  {group.items.map((skill) => (
+                    <span key={skill} className={skillItemClass}>{skill}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
