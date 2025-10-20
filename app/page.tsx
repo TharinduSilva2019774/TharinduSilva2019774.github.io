@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 
 type RevealProps = {
   children: ReactNode;
@@ -272,40 +273,114 @@ export default function HomePage() {
     isDark ? "hover:bg-slate-800/70" : "hover:bg-slate-100"
   }`;
 
-  const renderTechIcon = () => (
-    <svg
-      className={`h-5 w-5 ${isDark ? "text-slate-200" : "text-slate-600"}`}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4.75 5.75C4.75 4.784 5.534 4 6.5 4h11c.966 0 1.75.784 1.75 1.75v11.5c0 .966-.784 1.75-1.75 1.75h-11A1.75 1.75 0 0 1 4.75 17.25V5.75Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M4.75 8.5h14.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M8 3.5v2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M16 3.5v2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
+  const techIcon = (label: string) => {
+    const commonClass = `h-5 w-5 ${
+      isDark ? "text-slate-200" : "text-slate-600"
+    }`;
+    const l = label.toLowerCase();
+    if (l.includes("react")) {
+      return (
+        <div>
+          <Image src="/React.png" width={25} height={25} alt="React" />
+        </div>
+      );
+    }
+    if (l.includes("spring")) {
+      return (
+        <div>
+          <Image src="/Spring.png" width={25} height={25} alt="Spring" />
+        </div>
+      );
+    }
+    if (l.includes("java")) {
+      return (
+        <div>
+          <Image src="/Java.png" width={25} height={25} alt="Java" />
+        </div>
+      );
+    }
+    if (l.includes("python")) {
+      return (
+        <div>
+          <Image src="/Python.png" width={25} height={25} alt="Python" />
+        </div>
+      );
+    }
+    if (l.includes("aws")) {
+      if (isDark) {
+        return <Image src="/AWS-black.png" width={25} height={25} alt="AWS" />;
+      } else {
+        return <Image src="/AWS-white.png" width={25} height={25} alt="AWS" />;
+      }
+    }
+    if (l.includes("mysql") || l === "sql") {
+      return (
+        <div>
+          <Image src="/mysql.png" width={35} height={35} alt="MySQL" />
+        </div>
+      );
+    }
+    if (l.includes("react native")) {
+      return (
+        <div>
+          <Image src="/React.png" width={25} height={25} alt="React" />
+        </div>
+      );
+    }
+    if (l.includes("typescript")) {
+      return (
+        <div>
+          <Image
+            src="/TypeScript.png"
+            width={25}
+            height={25}
+            alt="TypeScript"
+          />
+        </div>
+      );
+    }
+    if (l === "sql") {
+      return (
+        <div>
+          <Image src="/SQL.png" width={25} height={25} alt="SQL" />
+        </div>
+      );
+    }
+    if (l.includes(".net")) {
+      return (
+        <div>
+          <Image src="/dotnet.png" width={45} height={45} alt=".NET" />
+        </div>
+      );
+    }
+    if (l.includes("flask")) {
+      return (
+        <div>
+          <Image src="/flask.png" width={25} height={25} alt="Flask" />
+        </div>
+      );
+    }
+    // Fallback generic square icon
+    return (
+      <svg
+        className={commonClass}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden
+      >
+        <rect
+          x="4"
+          y="4"
+          width="16"
+          height="16"
+          rx="3"
+          stroke="currentColor"
+          strokeWidth="1.2"
+        />
+      </svg>
+    );
+  };
 
   return (
     <main className={mainClass}>
@@ -410,7 +485,7 @@ export default function HomePage() {
                         className={techIconShellClass}
                         title={techLabel}
                       >
-                        {renderTechIcon()}
+                        {techIcon(techLabel)}
                       </span>
                     ))}
                   </div>
