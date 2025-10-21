@@ -288,7 +288,7 @@ export default function HomePage() {
       ? "border-slate-700 bg-slate-900/70 text-slate-200"
       : "border-slate-200 bg-slate-100 text-slate-600"
   }`;
-  const techIconShellClass = `flex h-12 w-12 items-center justify-center rounded-full border ${
+  const techIconShellClass = `flex h-14 w-14 items-center justify-center rounded-full border ${
     isDark ? "border-slate-700 bg-slate-900/80" : "border-slate-200 bg-white"
   }`;
   const recommendationCardClass = `mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-3xl px-8 py-10 text-center transition-all ${
@@ -407,7 +407,7 @@ export default function HomePage() {
     if (l.includes("flask")) {
       return (
         <div>
-          <Image src="/Flask.png" width={25} height={25} alt="Flask" />
+          <Image src="/Flask.png" width={45} height={45} alt="Flask" />
         </div>
       );
     }
