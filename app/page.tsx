@@ -157,7 +157,8 @@ export default function HomePage() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     if (typeof window !== "undefined") {
       const stored = window.localStorage.getItem("ts-portfolio-theme");
-      if (stored === "light" || stored === "dark") return stored as "light" | "dark";
+      if (stored === "light" || stored === "dark")
+        return stored as "light" | "dark";
     }
     return "dark";
   });
@@ -366,7 +367,7 @@ export default function HomePage() {
     if (l.includes("mysql") || l === "sql") {
       return (
         <div>
-          <Image src="/mysql.png" width={35} height={35} alt="MySQL" />
+          <Image src="/MySql.png" width={35} height={35} alt="MySQL" />
         </div>
       );
     }
@@ -399,14 +400,14 @@ export default function HomePage() {
     if (l.includes(".net")) {
       return (
         <div>
-          <Image src="/dotnet.png" width={45} height={45} alt=".NET" />
+          <Image src="/DotNet.png" width={45} height={45} alt=".NET" />
         </div>
       );
     }
     if (l.includes("flask")) {
       return (
         <div>
-          <Image src="/flask.png" width={25} height={25} alt="Flask" />
+          <Image src="/Flask.png" width={25} height={25} alt="Flask" />
         </div>
       );
     }
@@ -570,10 +571,14 @@ export default function HomePage() {
           <div className="grid gap-4 md:grid-cols-2">
             {skillGroups.map((group) => (
               <div key={group.title} className={skillCardClass}>
-                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">{group.title}</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  {group.title}
+                </h3>
                 <div className="mt-4 flex flex-wrap gap-2 text-sm">
                   {group.items.map((skill) => (
-                    <span key={skill} className={skillItemClass}>{skill}</span>
+                    <span key={skill} className={skillItemClass}>
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>
