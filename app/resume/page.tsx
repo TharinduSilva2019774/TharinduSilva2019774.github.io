@@ -240,17 +240,6 @@ export default function ResumePage() {
               </span>
               <p className="mt-1 font-medium">London, United Kingdom</p>
             </div>
-            <div>
-              <span className="text-xs uppercase tracking-[0.3em] text-slate-400">
-                Portfolio
-              </span>
-              <Link
-                className="mt-1 block font-medium hover:text-white"
-                href="/"
-              >
-                tharindusilva.github.io
-              </Link>
-            </div>
           </div>
         </div>
       </header>
