@@ -232,102 +232,78 @@ export default function HomePage() {
     [activeRecommendation]
   );
 
-  const mainClass = `flex min-h-screen flex-col ${
-    isDark ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-900"
-  }`;
-  const heroClass = `relative flex min-h-screen flex-col items-center justify-center px-6 py-24 ${
-    isDark
+  const mainClass = `flex min-h-screen flex-col ${isDark ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-900"
+    }`;
+  const heroClass = `relative flex min-h-screen flex-col items-center justify-center px-6 py-24 ${isDark
       ? "bg-gradient-to-b from-slate-900 via-slate-950 to-black"
       : "bg-gradient-to-b from-white via-slate-100 to-slate-50"
-  }`;
-  const heroBadgeClass = `text-sm uppercase tracking-[0.3em] ${
-    isDark ? "text-slate-400" : "text-slate-500"
-  }`;
-  const heroBodyText = `max-w-xl text-base sm:text-lg ${
-    isDark ? "text-slate-300" : "text-slate-600"
-  }`;
+    }`;
+  const heroBadgeClass = `text-sm uppercase tracking-[0.3em] ${isDark ? "text-slate-400" : "text-slate-500"
+    }`;
+  const heroBodyText = `max-w-xl text-base sm:text-lg ${isDark ? "text-slate-300" : "text-slate-600"
+    }`;
   const primaryButtonClass = isDark
     ? "rounded-full bg-slate-100 px-6 py-2 text-sm font-semibold text-slate-900 transition hover:bg-white hover:text-black"
     : "rounded-full bg-slate-900 px-6 py-2 text-sm font-semibold text-white transition hover:bg-slate-800";
   const secondaryButtonClass = isDark
     ? "rounded-full border border-slate-500 px-6 py-2 text-sm font-semibold text-slate-100 transition hover:border-slate-300 hover:text-white"
     : "rounded-full border border-slate-300 px-6 py-2 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:text-slate-600";
-  const aboutCardClass = `mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-3xl px-8 py-10 text-center md:text-left ${
-    isDark
+  const aboutCardClass = `mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-3xl px-8 py-10 text-center md:text-left ${isDark
       ? "bg-slate-900/60 shadow-xl shadow-black/30"
       : "border border-slate-200 bg-white shadow-lg shadow-slate-200/60"
-  }`;
-  const sectionBadgeClass = `text-sm uppercase tracking-[0.3em] ${
-    isDark ? "text-slate-400" : "text-slate-500"
-  }`;
-  const sectionHeadingClass = `text-3xl font-semibold sm:text-4xl ${
-    isDark ? "text-slate-100" : "text-slate-900"
-  }`;
-  const sectionBodyText = `text-base sm:text-lg ${
-    isDark ? "text-slate-300" : "text-slate-600"
-  }`;
-  const projectsIntroText = `text-base sm:text-lg ${
-    isDark ? "text-slate-400" : "text-slate-600"
-  }`;
-  const projectCardClass = `flex min-h-[240px] flex-col gap-4 rounded-3xl p-6 text-left shadow-lg transition-colors ${
-    isDark
+    }`;
+  const sectionBadgeClass = `text-sm uppercase tracking-[0.3em] ${isDark ? "text-slate-400" : "text-slate-500"
+    }`;
+  const sectionHeadingClass = `text-3xl font-semibold sm:text-4xl ${isDark ? "text-slate-100" : "text-slate-900"
+    }`;
+  const sectionBodyText = `text-base sm:text-lg ${isDark ? "text-slate-300" : "text-slate-600"
+    }`;
+  const projectsIntroText = `text-base sm:text-lg ${isDark ? "text-slate-400" : "text-slate-600"
+    }`;
+  const projectCardClass = `flex min-h-[240px] flex-col gap-4 rounded-3xl p-6 text-left shadow-lg transition-colors ${isDark
       ? "border border-slate-800 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-900/80 shadow-black/25"
       : "border border-slate-200 bg-white shadow-slate-200/60"
-  }`;
-  const projectTitleClass = `text-lg font-semibold ${
-    isDark ? "text-slate-100" : "text-slate-900"
-  }`;
-  const projectCopyClass = `mt-2 text-sm ${
-    isDark ? "text-slate-300" : "text-slate-600"
-  }`;
-  const projectStackLabelClass = `text-xs uppercase tracking-[0.25em] ${
-    isDark ? "text-slate-500" : "text-slate-500"
-  }`;
-  const techChipClass = `rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${
-    isDark
+    }`;
+  const projectTitleClass = `text-lg font-semibold ${isDark ? "text-slate-100" : "text-slate-900"
+    }`;
+  const projectCopyClass = `mt-2 text-sm ${isDark ? "text-slate-300" : "text-slate-600"
+    }`;
+  const projectStackLabelClass = `text-xs uppercase tracking-[0.25em] ${isDark ? "text-slate-500" : "text-slate-500"
+    }`;
+  const techChipClass = `rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] ${isDark
       ? "border-slate-700 bg-slate-900/70 text-slate-200"
       : "border-slate-200 bg-slate-100 text-slate-600"
-  }`;
-  const techIconShellClass = `flex h-14 w-14 items-center justify-center rounded-full border ${
-    isDark ? "border-slate-700 bg-slate-900/80" : "border-slate-200 bg-white"
-  }`;
-  const recommendationCardClass = `mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-3xl px-8 py-10 text-center transition-all ${
-    isDark
+    }`;
+  const techIconShellClass = `flex h-14 w-14 items-center justify-center rounded-full border ${isDark ? "border-slate-700 bg-slate-900/80" : "border-slate-200 bg-white"
+    }`;
+  const recommendationCardClass = `mx-auto flex w-full max-w-3xl flex-col gap-6 rounded-3xl px-8 py-10 text-center transition-all ${isDark
       ? "border border-slate-800 bg-slate-900/70 shadow-xl shadow-black/30"
       : "border border-slate-200 bg-white shadow-lg shadow-slate-200/60"
-  }`;
-  const recommendationNameClass = `text-lg font-semibold ${
-    isDark ? "text-slate-100" : "text-slate-900"
-  }`;
-  const recommendationQuoteClass = `text-base italic ${
-    isDark ? "text-slate-300" : "text-slate-600"
-  }`;
-  const skillCardClass = `rounded-3xl p-6 shadow-sm transition ${
-    isDark
+    }`;
+  const recommendationNameClass = `text-lg font-semibold ${isDark ? "text-slate-100" : "text-slate-900"
+    }`;
+  const recommendationQuoteClass = `text-base italic ${isDark ? "text-slate-300" : "text-slate-600"
+    }`;
+  const skillCardClass = `rounded-3xl p-6 shadow-sm transition ${isDark
       ? "border border-slate-800 bg-slate-900/70 text-slate-200 shadow-black/30"
       : "border border-slate-200 bg-white text-slate-700 shadow-slate-200/60"
-  }`;
-  const skillItemClass = `rounded-full px-3 py-1 font-medium ${
-    isDark ? "bg-slate-800 text-slate-200" : "bg-slate-100 text-slate-600"
-  }`;
-  const contactButtonClass = `inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
-    isDark
+    }`;
+  const skillItemClass = `rounded-full px-3 py-1 font-medium ${isDark ? "bg-slate-800 text-slate-200" : "bg-slate-100 text-slate-600"
+    }`;
+  const contactButtonClass = `inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${isDark
       ? "border-slate-700 bg-slate-900/80 text-slate-200 hover:border-slate-500 hover:text-white"
       : "border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:text-slate-900"
-  }`;
-  const contactPanelClass = `mt-3 w-64 rounded-3xl border p-4 shadow-lg transition ${
-    isDark
+    }`;
+  const contactPanelClass = `mt-3 w-64 rounded-3xl border p-4 shadow-lg transition ${isDark
       ? "border-slate-800 bg-slate-900/80 text-slate-200 shadow-black/30"
       : "border-slate-200 bg-white text-slate-700 shadow-slate-300/60"
-  }`;
-  const contactLinkClass = `flex items-start gap-3 rounded-2xl px-3 py-2 text-sm font-medium transition ${
-    isDark ? "hover:bg-slate-800/70" : "hover:bg-slate-100"
-  }`;
+    }`;
+  const contactLinkClass = `flex items-start gap-3 rounded-2xl px-3 py-2 text-sm font-medium transition ${isDark ? "hover:bg-slate-800/70" : "hover:bg-slate-100"
+    }`;
 
   const techIcon = (label: string) => {
-    const commonClass = `h-5 w-5 ${
-      isDark ? "text-slate-200" : "text-slate-600"
-    }`;
+    const commonClass = `h-5 w-5 ${isDark ? "text-slate-200" : "text-slate-600"
+      }`;
     const l = label.toLowerCase();
     if (l.includes("react")) {
       return (
@@ -411,7 +387,7 @@ export default function HomePage() {
         </div>
       );
     }
-    // Fallback generic square icon
+    // Fallback generic square icon.
     return (
       <svg
         className={commonClass}
@@ -439,11 +415,10 @@ export default function HomePage() {
         <button
           type="button"
           onClick={toggleTheme}
-          className={`absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
-            isDark
+          className={`absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${isDark
               ? "border-slate-700 bg-slate-900/70 text-slate-200 hover:border-slate-500 hover:text-white"
               : "border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:text-slate-900"
-          }`}
+            }`}
           aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
         >
           <span>{isDark ? "🌙" : "☀️"}</span>
@@ -451,16 +426,14 @@ export default function HomePage() {
         </button>
         <Reveal className="flex w-full max-w-3xl flex-col items-center gap-8 text-center">
           <div
-            className={`relative flex h-40 w-40 items-center justify-center rounded-full shadow-lg ${
-              isDark
+            className={`relative flex h-40 w-40 items-center justify-center rounded-full shadow-lg ${isDark
                 ? "bg-slate-800 shadow-slate-900/40"
                 : "bg-slate-200 shadow-slate-400/40"
-            }`}
+              }`}
           >
             <span
-              className={`text-4xl font-semibold tracking-wide ${
-                isDark ? "text-slate-200" : "text-slate-700"
-              }`}
+              className={`text-4xl font-semibold tracking-wide ${isDark ? "text-slate-200" : "text-slate-700"
+                }`}
             >
               TS
             </span>
@@ -468,9 +441,8 @@ export default function HomePage() {
           <div className="space-y-2">
             <p className={heroBadgeClass}>Software Engineer</p>
             <h1
-              className={`text-4xl font-bold sm:text-5xl ${
-                isDark ? "text-slate-100" : "text-slate-900"
-              }`}
+              className={`text-4xl font-bold sm:text-5xl ${isDark ? "text-slate-100" : "text-slate-900"
+                }`}
             >
               Tharindu Silva
             </h1>
@@ -606,15 +578,14 @@ export default function HomePage() {
               {recommendations.map((_, idx) => (
                 <span
                   key={idx}
-                  className={`h-2 w-6 rounded-full transition ${
-                    idx === activeRecommendation
+                  className={`h-2 w-6 rounded-full transition ${idx === activeRecommendation
                       ? isDark
                         ? "bg-slate-100"
                         : "bg-slate-900"
                       : isDark
-                      ? "bg-slate-700/60"
-                      : "bg-slate-300"
-                  }`}
+                        ? "bg-slate-700/60"
+                        : "bg-slate-300"
+                    }`}
                   aria-hidden
                 />
               ))}
