@@ -170,6 +170,13 @@ const courses: Course[] = [
     description:
       "Learn Python programming with AI support to enhance your coding workflow. Build strong skills in writing, testing, and debugging code efficiently, and apply your knowledge to develop real-world AI-powered applications.",
   },
+    {
+    title: "Agentic AI",
+    provider: "deeplearning.ai",
+    link: "https://learn.deeplearning.ai/certificates/a9716eda-1449-4d60-8554-95d381edfd0a?usp=sharing",
+    description:
+      "Building agentic AI systems that take action through iterative, multi-step workflows.",
+  },
 ];
 
 const projects: Project[] = [
