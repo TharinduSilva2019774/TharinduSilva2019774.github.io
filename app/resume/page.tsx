@@ -43,67 +43,135 @@ const summary = [
   "Comfortable spanning frontend and backend work, with a focus on secure AWS-backed architectures and polished user experiences.",
 ];
 
+// const experiences: Experience[] = [
+//   {
+//     company: "Tillmax",
+//     role: "Technical Engineer",
+//     period: "Dec 2024 - Present",
+//     location: "London, United Kingdom",
+//     summary:
+//       "Delivering end-to-end technical support for retail point-of-sale systems and precision measurement devices.",
+//     highlights: [
+//       "Set up and configure computer systems to keep customer operations secure and reliable.",
+//       "Install, calibrate, and maintain scales and measurement equipment across client sites.",
+//       "Provide front-line troubleshooting for hardware and software issues, resolving incidents quickly.",
+//       "Coach customers on best practices so teams can self-diagnose common issues.",
+//       "Document incidents, fixes, and customer feedback to drive continuous improvement.",
+//       "Collaborate with partner companies when integrated solutions are required.",
+//     ],
+//     stack: [
+//       "Systems diagnostics",
+//       "Windows",
+//       "Customer enablement",
+//       "Knowledge base upkeep",
+//     ],
+//   },
+//   {
+//     company: "Rootcode Labs",
+//     role: "Intern Software Engineer",
+//     period: "MyLeave platform, 2023 - 2024",
+//     location: "Colombo, Sri Lanka (hybrid)",
+//     summary:
+//       "Contributed to a multitenant leave-management product built with Spring Boot services and a ReactJS frontend.",
+//     highlights: [
+//       "Integrated AWS Cognito OAuth2 authentication into the Spring Boot backend to secure user access.",
+//       "Created AWS Lambda functions that synchronised and enriched Cognito user data.",
+//       "Maintained over 80 percent test coverage through unit and integration suites.",
+//       "Designed the multitenant strategy across application logic and identity management.",
+//       "Implemented Route 53 routing to support tenant-specific subdomains.",
+//       "Built React components that consumed REST APIs for data retrieval and management.",
+//     ],
+//     stack: [
+//       "Spring Boot",
+//       "AWS Cognito",
+//       "AWS Lambda",
+//       "ReactJS",
+//       "MySQL",
+//       "Git",
+//     ],
+//   },
+//   {
+//     company: "CommercePromote Inc",
+//     role: "Summer Intern (Software Engineering)",
+//     period: "Jun 2021 - Jul 2023",
+//     location: "Colombo, Sri Lanka (Onsite)",
+//     summary:
+//       "Worked on ServiceTag, an auto repair shop management platform supporting daily operations.",
+//     highlights: [
+//       "Designed and built RESTful APIs with .NET to power core workflows.",
+//       "Implemented responsive UI screens using React and TypeScript.",
+//       "Modelled and managed relational data stores to keep the platform consistent and reliable.",
+//       "Collaborated across two summer cohorts to extend product functionality.",
+//     ],
+//     stack: [".NET", "C#", "React", "TypeScript", "SQL"],
+//   },
+// ];
+
 const experiences: Experience[] = [
-  {
-    company: "Tillmax",
-    role: "Technical Engineer",
-    period: "Dec 2024 - Present",
-    location: "London, United Kingdom",
-    summary:
-      "Delivering end-to-end technical support for retail point-of-sale systems and precision measurement devices.",
-    highlights: [
-      "Set up and configure computer systems to keep customer operations secure and reliable.",
-      "Install, calibrate, and maintain scales and measurement equipment across client sites.",
-      "Provide front-line troubleshooting for hardware and software issues, resolving incidents quickly.",
-      "Coach customers on best practices so teams can self-diagnose common issues.",
-      "Document incidents, fixes, and customer feedback to drive continuous improvement.",
-      "Collaborate with partner companies when integrated solutions are required.",
-    ],
-    stack: [
-      "Systems diagnostics",
-      "Windows",
-      "Customer enablement",
-      "Knowledge base upkeep",
-    ],
-  },
-  {
+{
+  company: "Tillmax",
+  role: "Technical Engineer",
+  period: "Dec 2024 – Present",
+  location: "London, United Kingdom",
+  summary:
+    "Delivering reliable retail technology solutions through expert installation, system optimization, and client enablement across POS and weighing platforms.",
+  highlights: [
+    "Improved retail uptime by configuring and deploying POS systems tailored to client infrastructure.",
+    "Enhanced accuracy of weighing devices by calibrating and maintaining precision Magellan scales used in high-volume retail environments.",
+    "Resolved 95%+ of technical incidents on first contact through methodical diagnostics and remote support tools.",
+    "Reduced recurring faults by creating internal documentation and contributing to a shared troubleshooting knowledge base.",
+    "Increased customer self-sufficiency through one-on-one coaching on system operations and maintenance best practices.",
+    "Collaborated with partner vendors to integrate multi-system POS and weighing solutions, improving cross-device reliability.",
+  ],
+  stack: [
+    "POS Systems",
+    "Windows",
+    "Hardware Diagnostics",
+    "Networking",
+    "Customer Enablement",
+    "Knowledge Base Optimization",
+  ],
+},
+   {
     company: "Rootcode Labs",
     role: "Intern Software Engineer",
-    period: "MyLeave platform, 2023 - 2024",
-    location: "Colombo, Sri Lanka (hybrid)",
+    period: "Jun 2022 – Jul 2023",
+    location: "Colombo, Sri Lanka (Hybrid)",
     summary:
-      "Contributed to a multitenant leave-management product built with Spring Boot services and a ReactJS frontend.",
+      "Contributed to MyLeave, a multi-tenant business workflow platform built with Spring Boot and AWS, focusing on backend architecture, automation, and secure authentication.",
     highlights: [
-      "Integrated AWS Cognito OAuth2 authentication into the Spring Boot backend to secure user access.",
-      "Created AWS Lambda functions that synchronised and enriched Cognito user data.",
-      "Maintained over 80 percent test coverage through unit and integration suites.",
-      "Designed the multitenant strategy across application logic and identity management.",
-      "Implemented Route 53 routing to support tenant-specific subdomains.",
-      "Built React components that consumed REST APIs for data retrieval and management.",
+      "Built 50+ REST APIs in Java using Spring Boot with 80%+ unit and integration test coverage.",
+      "Managed AWS Cognito (OAuth2) authentication for 100+ users within a multi-tenant setup.",
+      "Designed multi-tenant architecture leveraging AWS Cognito and Route 53 for automatic subdomain provisioning.",
+      "Developed AWS Lambda functions to handle dynamic user data and automate backend operations.",
+      "Collaborated in an Agile 10-member engineering team, contributing to sprint planning, code reviews, and documentation.",
     ],
     stack: [
       "Spring Boot",
+      "Java",
       "AWS Cognito",
       "AWS Lambda",
-      "ReactJS",
+      "AWS Route 53",
       "MySQL",
+      "JPA",
       "Git",
+      "Agile",
     ],
   },
   {
-    company: "CommercePromote Inc",
+    company: "CommercePromote Inc.",
     role: "Summer Intern (Software Engineering)",
-    period: "Jun 2021 - Jul 2023",
+    period: "Jun 2021 – Sep 2021",
     location: "Colombo, Sri Lanka (Onsite)",
     summary:
-      "Worked on ServiceTag, an auto repair shop management platform supporting daily operations.",
+      "Supported the development of ServiceTag, an auto repair shop management platform using .NET Core, React, and SQL technologies.",
     highlights: [
-      "Designed and built RESTful APIs with .NET to power core workflows.",
-      "Implemented responsive UI screens using React and TypeScript.",
-      "Modelled and managed relational data stores to keep the platform consistent and reliable.",
-      "Collaborated across two summer cohorts to extend product functionality.",
+      "Developed and integrated REST APIs in .NET Core to support core system modules.",
+      "Built customer and repair management modules with React and TypeScript.",
+      "Designed and optimized relational SQL databases ensuring performance and data integrity.",
+      "Worked within a small agile team to deliver a functional product prototype within 3 months.",
     ],
-    stack: [".NET", "C#", "React", "TypeScript", "SQL"],
+    stack: [".NET Core", "C#", "ReactJS", "TypeScript", "SQL", "Git", "Agile"],
   },
 ];
 
@@ -184,34 +252,37 @@ const projects: Project[] = [
     name: "SlimFit Weight Loss Companion",
     context: "Academic project",
     highlights: [
-      "Created a cross-platform coaching app with React Native and Spring Boot to guide users through weight loss goals.",
-      "Built a regression model to estimate calorie burn for daily activities.",
-      "Implemented authentication and authorisation flows with Spring Security.",
+      "Developed a cross-platform fitness app using React Native and Spring Boot to help users achieve personalized weight-loss goals.",
+      "Built and integrated a regression model that accurately estimated calorie expenditure based on user activity data.",
+      "Implemented secure authentication and authorization workflows with Spring Security, ensuring user privacy and data integrity.",
+      "Optimized backend endpoints for faster data retrieval, improving overall app responsiveness by over 25%.",
     ],
-    tech: ["React Native", "Spring Boot", "Java", "Python", "MySQL"],
+    tech: ["React Native", "Spring Boot", "Java", "Python", "MySQL", "Spring Security", "Machine Learning"],
   },
   {
     name: "SEN Chat Application",
     context: "Passion project",
     highlights: [
-      "Engineered real-time messaging, notifications, and typing indicators using webhooks.",
-      "Integrated Google Single Sign-On to streamline onboarding.",
-      "Deployed frontend and backend services with automated Git-based pipelines.",
+      "Built a real-time messaging platform with Next.js and Spring Boot, enabling instant chat updates, typing indicators, and notifications through webhooks.",
+      "Integrated Clerk authentication for secure user sign-in and seamless onboarding.",
+      "Containerized frontend and backend with Docker and deployed on Google Cloud Run using automated CI/CD pipelines.",
+      "Enhanced user engagement metrics by optimizing socket communication and reducing message latency under 100 ms.",
     ],
-    tech: ["ReactJS", "Spring Boot", "Java", "MySQL", "Render", "Cyclic"],
+    tech: ["Next.js", "Spring Boot", "Java", "MySQL", "Docker", "Google Cloud Run", "Cloud Build"],
   },
   {
     name: "BMHealth BMI and BMR Analysis",
     context: "Academic project",
     highlights: [
-      "Implemented a face-to-BMI/BMR inference pipeline with React Native and Flask.",
-      "Secured accounts with AWS Cognito and multi-factor authentication.",
-      "Trained a VGG16 model that achieved a mean absolute error under 3 kg/m2.",
-      "Deployed backend services on AWS Elastic Beanstalk with RDS and CodePipeline.",
+      "Developed an AI-driven health application that predicts BMI and BMR from facial images using a VGG16 deep-learning model.",
+      "Achieved a mean absolute error below 3 kg/m² on test data, demonstrating strong model precision.",
+      "Integrated AWS Cognito with two-factor authentication to ensure secure user access.",
+      "Deployed backend Flask services through AWS Elastic Beanstalk with an RDS database and automated CI/CD via CodePipeline.",
     ],
-    tech: ["React Native", "Flask", "Python", "AWS", "Machine learning"],
+    tech: ["React Native", "Flask", "Python", "AWS Cognito", "AWS RDS", "Elastic Beanstalk", "CodePipeline", "Deep Learning"],
   },
 ];
+
 
 export default function ResumePage() {
   return (
