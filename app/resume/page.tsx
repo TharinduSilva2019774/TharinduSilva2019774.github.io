@@ -245,6 +245,13 @@ const courses: Course[] = [
     description:
       "Building agentic AI systems that take action through iterative, multi-step workflows.",
   },
+      {
+    title: "ChatGPT Prompt Engineering for Developers",
+    provider: "deeplearning.ai",
+    link: "https://learn.deeplearning.ai/accomplishments/38687b4e-a832-44e9-9203-bbd798107ce5?usp=sharing",
+    description:
+      "Learn prompt engineering with hands-on AI support, mastering how to design, refine, and apply prompts to build real-world LLM-powered applications.",
+  },
 ];
 
 const projects: Project[] = [
