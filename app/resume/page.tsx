@@ -108,43 +108,43 @@ const summary = [
 // ];
 
 const experiences: Experience[] = [
-{
-  company: "Tillmax",
-  role: "Technical Engineer",
-  period: "Dec 2024 – Present",
-  location: "London, United Kingdom",
-  summary:
-    "Delivering reliable retail technology solutions through expert installation, system optimization, and client enablement across POS and weighing platforms.",
-  highlights: [
-    "Improved retail uptime by configuring and deploying POS systems tailored to client infrastructure.",
-    "Enhanced accuracy of weighing devices by calibrating and maintaining precision Magellan scales used in high-volume retail environments.",
-    "Resolved 95%+ of technical incidents on first contact through methodical diagnostics and remote support tools.",
-    "Reduced recurring faults by creating internal documentation and contributing to a shared troubleshooting knowledge base.",
-    "Increased customer self-sufficiency through one-on-one coaching on system operations and maintenance best practices.",
-    "Collaborated with partner vendors to integrate multi-system POS and weighing solutions, improving cross-device reliability.",
-  ],
-  stack: [
-    "POS Systems",
-    "Windows",
-    "Hardware Diagnostics",
-    "Networking",
-    "Customer Enablement",
-    "Knowledge Base Optimization",
-  ],
-},
-   {
+  {
+    company: "Tillmax",
+    role: "Technical Engineer",
+    period: "Dec 2024 – Present",
+    location: "London, United Kingdom",
+    summary:
+      "Delivered reliable retail technology solutions by deploying, optimizing, and supporting POS and precision weighing systems in high-volume retail environments. Specialized in system diagnostics, hardware-software integration, and client enablement to improve uptime and operational accuracy.",
+    highlights: [
+      "Deployed and configured POS systems tailored to client infrastructure, improving retail system uptime and stability.",
+      "Calibrated and maintained high-precision Magellan weighing scales, ensuring accurate measurements in production retail environments.",
+      "Resolved 95%+ of incidents on first contact using structured diagnostics, log analysis, and remote support tools.",
+      "Reduced repeat issues by creating internal documentation and contributing to a shared troubleshooting knowledge base.",
+      "Delivered one-to-one customer training on system operation and maintenance, increasing client self-sufficiency.",
+      "Collaborated with third-party vendors to integrate POS and weighing platforms, improving cross-system reliability.",
+    ],
+    stack: [
+      "POS Systems",
+      "Windows",
+      "Hardware Diagnostics",
+      "Networking",
+      "Customer Enablement",
+      "Knowledge Base Optimization",
+    ],
+  },
+  {
     company: "Rootcode Labs",
     role: "Intern Software Engineer",
     period: "Jun 2022 – Jul 2023",
     location: "Colombo, Sri Lanka (Hybrid)",
     summary:
-      "Contributed to MyLeave, a multi-tenant business workflow platform built with Spring Boot and AWS, focusing on backend architecture, automation, and secure authentication.",
+      "Contributed to Skapp, a multi-tenant business workflow platform built with Spring Boot and AWS, focusing on backend architecture, automation, and secure authentication.",
     highlights: [
-      "Built 50+ REST APIs in Java using Spring Boot with 80%+ unit and integration test coverage.",
-      "Managed AWS Cognito (OAuth2) authentication for 100+ users within a multi-tenant setup.",
-      "Designed multi-tenant architecture leveraging AWS Cognito and Route 53 for automatic subdomain provisioning.",
-      "Developed AWS Lambda functions to handle dynamic user data and automate backend operations.",
-      "Collaborated in an Agile 10-member engineering team, contributing to sprint planning, code reviews, and documentation.",
+      "Built 50+ RESTful APIs in Java using Spring Boot, achieving 80%+ unit and integration test coverage.",
+      "Implemented and managed AWS Cognito (OAuth2) authentication for 100+ users in a multi-tenant environment.",
+      "Designed a scalable multi-tenant architecture using AWS Cognito and Route 53 for automatic subdomain provisioning.",
+      "Developed AWS Lambda functions to automate backend workflows and handle dynamic user data.",
+      "Worked within a 10-member Agile team, contributing to sprint planning, code reviews, and technical documentation.",
     ],
     stack: [
       "Spring Boot",
@@ -238,14 +238,14 @@ const courses: Course[] = [
     description:
       "Learn Python programming with AI support to enhance your coding workflow. Build strong skills in writing, testing, and debugging code efficiently, and apply your knowledge to develop real-world AI-powered applications.",
   },
-    {
+  {
     title: "Agentic AI",
     provider: "deeplearning.ai",
     link: "https://learn.deeplearning.ai/certificates/a9716eda-1449-4d60-8554-95d381edfd0a?usp=sharing",
     description:
       "Building agentic AI systems that take action through iterative, multi-step workflows.",
   },
-      {
+  {
     title: "ChatGPT Prompt Engineering for Developers",
     provider: "deeplearning.ai",
     link: "https://learn.deeplearning.ai/accomplishments/38687b4e-a832-44e9-9203-bbd798107ce5?usp=sharing",
@@ -264,7 +264,15 @@ const projects: Project[] = [
       "Implemented secure authentication and authorization workflows with Spring Security, ensuring user privacy and data integrity.",
       "Optimized backend endpoints for faster data retrieval, improving overall app responsiveness by over 25%.",
     ],
-    tech: ["React Native", "Spring Boot", "Java", "Python", "MySQL", "Spring Security", "Machine Learning"],
+    tech: [
+      "React Native",
+      "Spring Boot",
+      "Java",
+      "Python",
+      "MySQL",
+      "Spring Security",
+      "Machine Learning",
+    ],
   },
   {
     name: "SEN Chat Application",
@@ -275,7 +283,15 @@ const projects: Project[] = [
       "Containerized frontend and backend with Docker and deployed on Google Cloud Run using automated CI/CD pipelines.",
       "Enhanced user engagement metrics by optimizing socket communication and reducing message latency under 100 ms.",
     ],
-    tech: ["Next.js", "Spring Boot", "Java", "MySQL", "Docker", "Google Cloud Run", "Cloud Build"],
+    tech: [
+      "Next.js",
+      "Spring Boot",
+      "Java",
+      "MySQL",
+      "Docker",
+      "Google Cloud Run",
+      "Cloud Build",
+    ],
   },
   {
     name: "BMHealth BMI and BMR Analysis",
@@ -286,10 +302,18 @@ const projects: Project[] = [
       "Integrated AWS Cognito with two-factor authentication to ensure secure user access.",
       "Deployed backend Flask services through AWS Elastic Beanstalk with an RDS database and automated CI/CD via CodePipeline.",
     ],
-    tech: ["React Native", "Flask", "Python", "AWS Cognito", "AWS RDS", "Elastic Beanstalk", "CodePipeline", "Deep Learning"],
+    tech: [
+      "React Native",
+      "Flask",
+      "Python",
+      "AWS Cognito",
+      "AWS RDS",
+      "Elastic Beanstalk",
+      "CodePipeline",
+      "Deep Learning",
+    ],
   },
 ];
-
 
 export default function ResumePage() {
   return (
