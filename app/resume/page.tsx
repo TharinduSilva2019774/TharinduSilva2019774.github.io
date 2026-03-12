@@ -256,6 +256,27 @@ const courses: Course[] = [
 
 const projects: Project[] = [
   {
+    name: "SEN Chat Application",
+    context: "Passion project",
+    highlights: [
+      "Built a real-time messaging platform with Next.js and Spring Boot supporting instant messaging, typing indicators, and webhook-based notifications.",
+      "Implemented end-to-end encryption (E2EE) for secure message exchange using client-side cryptographic keys.",
+      "Integrated ChatGPT APIs to provide AI-assisted replies and conversational tools within the chat interface.",
+      "Used Clerk for authentication and user management with secure session handling",
+      "Containerized services using Docker and deployed to Google Cloud Run via automated CI/CD pipelines",
+      "Optimized WebSocket communication, achieving <100 ms message latency in real-time interactions.",
+    ],
+    tech: [
+      "Next.js",
+      "Spring Boot",
+      "Java",
+      "MySQL",
+      "Docker",
+      "Google Cloud Run",
+      "Cloud Build",
+    ],
+  },
+  {
     name: "SlimFit Weight Loss Companion",
     context: "Academic project",
     highlights: [
@@ -272,25 +293,6 @@ const projects: Project[] = [
       "MySQL",
       "Spring Security",
       "Machine Learning",
-    ],
-  },
-  {
-    name: "SEN Chat Application",
-    context: "Passion project",
-    highlights: [
-      "Built a real-time messaging platform with Next.js and Spring Boot, enabling instant chat updates, typing indicators, and notifications through webhooks.",
-      "Integrated Clerk authentication for secure user sign-in and seamless onboarding.",
-      "Containerized frontend and backend with Docker and deployed on Google Cloud Run using automated CI/CD pipelines.",
-      "Enhanced user engagement metrics by optimizing socket communication and reducing message latency under 100 ms.",
-    ],
-    tech: [
-      "Next.js",
-      "Spring Boot",
-      "Java",
-      "MySQL",
-      "Docker",
-      "Google Cloud Run",
-      "Cloud Build",
     ],
   },
   {
