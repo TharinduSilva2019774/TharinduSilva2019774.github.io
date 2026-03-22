@@ -411,11 +411,37 @@ export default function HomePage() {
 
   return (
     <main className={mainClass}>
-      <section className={heroClass}>
+      {/* Floating Navigation Bar */}
+      <nav
+        className={`fixed left-1/2 top-6 z-50 flex -translate-x-1/2 items-center gap-4 sm:gap-8 rounded-full border px-6 py-3 shadow-lg backdrop-blur-md transition-all ${
+          isDark
+            ? "border-slate-700/50 bg-slate-900/50 text-slate-200"
+            : "border-slate-300/50 bg-white/50 text-slate-700"
+        }`}
+      >
+        {[
+          { label: "Home", href: "#home" },
+          { label: "About", href: "#about" },
+          { label: "Projects", href: "#projects" },
+          { label: "Skills", href: "#skills" },
+        ].map((item) => (
+          <Link
+            key={item.label}
+            href={item.href}
+            className={`text-sm font-semibold transition-colors duration-200 ${
+              isDark ? "hover:text-amber-500" : "hover:text-amber-600"
+            }`}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+
+      <section id="home" className={heroClass}>
         <button
           type="button"
           onClick={toggleTheme}
-          className={`absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${isDark
+          className={`fixed right-6 top-6 z-50 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${isDark
               ? "border-slate-700 bg-slate-900/70 text-slate-200 hover:border-slate-500 hover:text-white"
               : "border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:text-slate-900"
             }`}
