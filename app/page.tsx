@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 type RevealProps = {
   children: ReactNode;
@@ -570,15 +570,26 @@ export default function HomePage() {
             <h2 className={sectionHeadingClass}>What Colleagues Say</h2>
           </div>
           <div className="relative w-full">
-            <aside className={recommendationCardClass}>
-              <blockquote className={recommendationQuoteClass}>
-                &ldquo;{currentRecommendation.quote}&rdquo;
-              </blockquote>
-              <span className={recommendationNameClass}>
-                {currentRecommendation.name}
-              </span>
+            <aside className={`${recommendationCardClass} min-h-[320px] sm:min-h-[240px] justify-center overflow-hidden`}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeRecommendation}
+                  initial={{ opacity: 0, x: 25, filter: "blur(4px)" }}
+                  animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, x: -25, filter: "blur(4px)" }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="flex flex-col gap-6"
+                >
+                  <blockquote className={recommendationQuoteClass}>
+                    &ldquo;{currentRecommendation.quote}&rdquo;
+                  </blockquote>
+                  <span className={recommendationNameClass}>
+                    {currentRecommendation.name}
+                  </span>
+                </motion.div>
+              </AnimatePresence>
             </aside>
-            <div className="mt-6 flex justify-center gap-2">
+            <div className="mt-6 flex justify-center gap-2 ">
               {recommendations.map((_, idx) => (
                 <span
                   key={idx}
