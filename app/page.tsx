@@ -1,53 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type RevealProps = {
   children: ReactNode;
   className?: string;
-  style?: CSSProperties;
+  delay?: number;
+  hover?: boolean;
 };
 
-function Reveal({ children, className = "", style }: RevealProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: "0px 0px -40px 0px" }
-    );
-
-    observer.observe(node);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
+function Reveal({ children, className = "", delay = 0, hover = false }: RevealProps) {
   return (
-    <div
-      ref={ref}
-      className={`reveal ${isVisible ? "is-visible" : ""} ${className}`.trim()}
-      style={style}
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      whileHover={hover ? { y: -10, scale: 1.02 } : undefined}
+      viewport={{ once: true, margin: "0px 0px -40px 0px", amount: 0.2 }}
+      transition={{ delay, type: "spring", stiffness: 80, damping: 12 }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
 
@@ -519,7 +496,8 @@ export default function HomePage() {
               <Reveal
                 key={project.title}
                 className={projectCardClass}
-                style={{ transitionDelay: `${0.1 * (index + 1)}s` }}
+                delay={0.1 * (index + 1)}
+                hover
               >
                 <div>
                   <h3 className={projectTitleClass}>{project.title}</h3>
