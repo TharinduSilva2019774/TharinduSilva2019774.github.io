@@ -21,3 +21,4 @@ The repository includes `.github/workflows/deploy.yml`, which outputs the static
 3. Each push to `main` runs the workflow, uploading the `out` directory and deploying to Pages.
 
 Manual deployment runs can be triggered from the **Actions** tab via the *Deploy to GitHub Pages* workflow dispatch.
+
